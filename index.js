@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 3000;
+
 app.use(express.json());
 
 let location = null;
@@ -16,5 +18,5 @@ app.get("/get-location", (req, res) => {
 });
 
 // 🚨 CECI EST LA BONNE LIGNE POUR RENDER :
-const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => console.log(`Serveur en ligne sur le port ${PORT}`));
